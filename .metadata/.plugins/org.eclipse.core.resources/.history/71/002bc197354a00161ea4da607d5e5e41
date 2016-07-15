@@ -1,0 +1,5 @@
+package sam.tools.vid.model;
+
+public class Vehicles {
+
+}

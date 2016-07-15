@@ -1,0 +1,18 @@
+package vid;
+
+import java.io.IOException;
+
+import javax.xml.bind.JAXBException;
+
+import org.junit.Test;
+
+public class TestXmlUnmarshall {
+	private static final String fileName = "vid.xml";
+	
+	@Test
+	public void test() throws JAXBException, IOException{
+		
+	
+	}
+
+}

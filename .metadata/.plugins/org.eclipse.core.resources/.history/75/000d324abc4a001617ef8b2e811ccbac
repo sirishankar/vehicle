@@ -1,0 +1,28 @@
+package vid;
+
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+import javax.xml.bind.JAXBException;
+
+import org.junit.Test;
+
+import sam.tools.vid.action.Converter;
+import sam.tools.vid.model.Vehicles;
+
+public class TestXmlUnmarshall {
+	private String fileName = "vid.xml";
+	
+	@Test
+	public void test() throws JAXBException, IOException{
+		Converter conv = new Converter();
+		Scanner reader = new Scanner(System.in);
+		fileName = reader.next();
+		Vehicles vehicles = conv.convertXmlToObject(fileName);
+	
+		assertTrue("Test Successful",vehicles.getVehicles().size() > 0);
+	}
+
+}

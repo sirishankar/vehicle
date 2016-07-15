@@ -1,0 +1,17 @@
+package sam.tools.vid.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name="powertrain")
+public class Powertrain {
+	private String human;
+
+	public String getHuman() {
+		return human;
+	}
+
+	public void setHuman(String human) {
+		this.human = human;
+	}
+}

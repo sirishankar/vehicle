@@ -1,0 +1,25 @@
+package vid;
+
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
+import org.junit.Test;
+
+import sam.tools.vid.model.Vehicle;
+
+public class TestXmlUnmarshall {
+	private static final String INPUT_FILE = "vid.xml";
+	
+	@Test
+	public void test() throws JAXBException{
+		JAXBContext context = JAXBContext.newInstance(Vehicle.class);
+		Unmarshaller unm = context.createUnmarshaller();
+		Vehicle vehicle = (Vehicle)unm.unmarshal(TestXmlUnmarshall.class.getClassLoader().
+				getResourceAsStream(INPUT_FILE));
+		
+		System.out.println(vehicle.toString());
+	}
+}

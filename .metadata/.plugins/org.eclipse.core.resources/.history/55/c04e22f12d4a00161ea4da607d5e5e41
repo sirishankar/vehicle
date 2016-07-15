@@ -1,0 +1,11 @@
+package vid;
+
+import org.junit.Test;
+
+public class TestXmlUnmarshall {
+
+	@Test
+	public void test(){
+		
+	}
+}

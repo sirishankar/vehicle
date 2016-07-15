@@ -1,0 +1,15 @@
+package sam.tools.vid.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+public class Powertrain {
+	private String human;
+
+	public String getHuman() {
+		return human;
+	}
+
+	public void setHuman(String human) {
+		this.human = human;
+	}
+}

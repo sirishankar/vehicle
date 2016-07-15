@@ -1,0 +1,32 @@
+package sam.tools.vid.action;
+
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
+import sam.tools.vid.model.Vehicle;
+import sam.tools.vid.model.Vehicles;
+
+public class Converter {
+
+	public Vehicles convertXmlToObject(String fileName) throws JAXBException{
+		JAXBContext context = JAXBContext.newInstance(Vehicles.class);
+		Unmarshaller unm = context.createUnmarshaller();
+		
+		File file = null;
+		file = new File(fileName);
+		if(!file.exists()){
+			ClassLoader loader = this.getClass().getClassLoader();
+			file = new File(loader.getResource("vid").getFile());
+		}
+		Vehicles vehicles = (Vehicles)unm.unmarshal(file);
+	
+		for(Vehicle vehicle : vehicles.getVehicles()){
+			System.out.println(vehicle.toString());
+		}
+		
+		return vehicles;
+	}
+}

@@ -1,0 +1,50 @@
+package sam.tools.vid.model;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement (name="vehicle")
+@XmlType(propOrder = {"id", "frame", "wheels", "powertrain"})
+public class Vehicle {
+	private String id;
+	private Frame frame;
+	private List<Wheel> wheels;
+	private Powertrain powertrain;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public Frame getFrame() {
+		return frame;
+	}
+	public void setFrame(Frame frame) {
+		this.frame = frame;
+	}
+	public List<Wheel> getWheels() {
+		return wheels;
+	}
+	public void setWheels(List<Wheel> wheels) {
+		this.wheels = wheels;
+	}
+	public Powertrain getPowertrain() {
+		return powertrain;
+	}
+	public void setPowertrain(Powertrain powertrain) {
+		this.powertrain = powertrain;
+	}
+	
+	@Override
+	public String toString(){
+		String str = "id: "+id+", Frame: "+frame.toString()+
+				", Wheels: "+wheels.toString()+", Powertrain: "+powertrain;
+		
+		return str;
+	}
+}

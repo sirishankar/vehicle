@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicles>
+	<vehicle>
+		<id>vehicle 1</id>
+		<frame>
+			<material>PLASTIC</material>
+		</frame>
+		<wheels>
+			<wheel>
+				<position>LEFT_REAR</position>
+				<material>PLASTIC</material>
+			</wheel>
+			<wheel>
+				<position>RIGHT_REAR</position>
+				<material>PLASTIC</material>
+			</wheel>
+			<wheel>
+				<position>FRONT</position>
+				<material>PLASTIC</material>
+			</wheel>
+		</wheels>
+		<powertrain>
+			<human />
+		</powertrain>
+	</vehicle>
+	<vehicle>
+		<id>vehicle 2</id>
+		<frame>
+			<material>METAL</material>
+		</frame>
+		<wheels>
+			<wheel>
+				<position>REAR</position>
+				<material>METAL</material>
+			</wheel>
+			<wheel>
+				<position>FRONT</position>
+				<material>METAL</material>
+			</wheel>
+		</wheels>
+		<powertrain>
+			<human />
+		</powertrain>
+	</vehicle>
+</vehicles>
